@@ -1,22 +1,27 @@
 import React from 'react';
 import { Mail, Phone, Award, Calendar } from 'lucide-react';
 
+import coleman from '../assets/images/randy.jpg';
+import mic from '../assets/images/mic.jpg';
+import Emily from '../assets/images/emily.jpg';
+
+
 const Attorneys = () => {
   const attorneys = [
     {
-      name: 'Sarah M. Garner',
+      name: 'Randy Coleman',
       title: 'Senior Partner & Founder',
-      image: 'https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: coleman,
       specialties: ['Corporate Law', 'Real Estate', 'Business Litigation'],
       experience: '25 Years',
       education: 'Harvard Law School, J.D.',
-      email: 'sarah.garner@lexguardpro.com',
+      email: 'info@colemanconsultlaw.com',
       phone: '(555) 123-4567',
     },
     {
       name: 'Michael R. Thompson',
       title: 'Criminal Defense Attorney',
-      image: 'https://images.pexels.com/photos/7841856/pexels-photo-7841856.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: mic,
       specialties: ['Criminal Defense', 'DUI Defense', 'White-Collar Crime'],
       experience: '18 Years',
       education: 'Stanford Law School, J.D.',
@@ -26,7 +31,7 @@ const Attorneys = () => {
     {
       name: 'Emily J. Rodriguez',
       title: 'Family Law Attorney',
-      image: 'https://images.pexels.com/photos/5668394/pexels-photo-5668394.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: Emily,
       specialties: ['Family Law', 'Divorce', 'Child Custody'],
       experience: '12 Years',
       education: 'Yale Law School, J.D.',

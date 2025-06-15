@@ -1,6 +1,82 @@
-import React, { useState, useEffect } from 'react';
-import { Send, User, Mail, Phone, MessageSquare, CheckCircle2 } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+// import React, { useState, useEffect } from 'react';
+// import { Send, User, Mail, Phone, MessageSquare, CheckCircle2 } from 'lucide-react';
+// import emailjs from '@emailjs/browser';
+
+// const ContactForm = () => {
+//   const [formData, setFormData] = useState({
+//     name: '',
+//     email: '',
+//     phone: '',
+//     message: '',
+//     agreeToTerms: false,
+//   });
+//   const [isSubmitted, setIsSubmitted] = useState(false);
+//   const [isLoading, setIsLoading] = useState(false);
+//   const [error, setError] = useState(null);
+
+//   // Initialize EmailJS with Public Key
+//   useEffect(() => {
+//     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY); // FTf7JFB8AZozX0B6B
+//   }, []);
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setError(null);
+//     setIsLoading(true);
+
+//     emailjs
+//       .send(
+//         import.meta.env.VITE_EMAILJS_SERVICE_ID, // service_6rxc9au
+//         import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // template_um88sbf
+//         {
+//           from_name: formData.name,
+//           from_email: formData.email,
+//           phone: formData.phone,
+//           message: formData.message,
+//         }
+//       )
+//       .then(() => {
+//         setIsSubmitted(true);
+//         setTimeout(() => {
+//           setIsSubmitted(false);
+//           setFormData({
+//             name: '',
+//             email: '',
+//             phone: '',
+//             message: '',
+//             agreeToTerms: false,
+//           });
+//         }, 3000);
+//       })
+//       .catch((error) => {
+//         setError('Failed to send message. Please try again later.');
+//         console.error('EmailJS error:', error);
+//       })
+//       .finally(() => {
+//         setIsLoading(false);
+//       });
+//   };
+
+//   const handleChange = (e) => {
+//     const { name, value, type } = e.target;
+//     setFormData((prev) => ({
+//       ...prev,
+//       [name]: type === 'checkbox' ? e.target.checked : value,
+//     }));
+//   };
+
+//   if (isSubmitted) {
+//     return (
+      
+
+// export default ContactForm;
+
+
+
+
+
+import React, { useState } from 'react';
+import { CheckCircle2, User, Mail, Phone, MessageSquare, Send } from 'lucide-react';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -10,59 +86,56 @@ const ContactForm = () => {
     message: '',
     agreeToTerms: false,
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  // Initialize EmailJS with Public Key
-  useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY); // FTf7JFB8AZozX0B6B
-  }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setError(null);
-    setIsLoading(true);
-
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID, // service_6rxc9au
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // template_um88sbf
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        }
-      )
-      .then(() => {
-        setIsSubmitted(true);
-        setTimeout(() => {
-          setIsSubmitted(false);
-          setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            message: '',
-            agreeToTerms: false,
-          });
-        }, 3000);
-      })
-      .catch((error) => {
-        setError('Failed to send message. Please try again later.');
-        console.error('EmailJS error:', error);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  };
+  const [error, setError] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value, type } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? e.target.checked : value,
+      [name]: type === 'checkbox' ? checked : value,
     }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '66d81b11-8534-4866-8398-a19979e21522',
+          ...formData,
+          subject: 'New Consultation Request',
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+          agreeToTerms: false,
+        });
+      } else {
+        setError('Failed to send request. Please try again later.');
+      }
+    } catch (err) {
+      setError('An error occurred. Please try again later.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubmitted) {
