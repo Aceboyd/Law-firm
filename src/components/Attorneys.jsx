@@ -16,7 +16,7 @@ const Attorneys = () => {
       experience: '25 Years',
       education: 'Harvard Law School, J.D.',
       email: 'info@colemanconsultlaw.com',
-      phone: '(555) 123-4567',
+      phone: '+1 (659) 237-0466',
     },
     {
       name: 'Michael R. Thompson',
@@ -26,7 +26,7 @@ const Attorneys = () => {
       experience: '18 Years',
       education: 'Stanford Law School, J.D.',
       email: 'michael.thompson@lexguardpro.com',
-      phone: '(555) 123-4568',
+      phone: '+1 (636) 287-0662',
     },
     {
       name: 'Emily J. Rodriguez',
@@ -36,7 +36,7 @@ const Attorneys = () => {
       experience: '12 Years',
       education: 'Yale Law School, J.D.',
       email: 'emily.rodriguez@lexguardpro.com',
-      phone: '(555) 123-4569',
+      phone: '(547) 673-4599',
     },
   ];
 

@@ -85,12 +85,12 @@ const Footer = () => {
                 <div className="text-[#F5F5F5]/80">
                   <p>123 Legal District Drive</p>
                   <p>Suite 500</p>
-                  <p>Metropolitan City, MC 12345</p>
+                  <p>777 S Figueroa St, Los Angeles, CA 90017, USA</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-[#D4AF37]" />
-                <span className="text-[#F5F5F5]/80">(555) 123-4567</span>
+                <span className="text-[#F5F5F5]/80">+1 (659) 237-0466</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-[#D4AF37]" />
@@ -100,7 +100,7 @@ const Footer = () => {
             
             <div className="mt-6 p-4 bg-[#2E3A59]/80 rounded-lg">
               <p className="text-sm text-[#F5F5F5]/80 mb-2 font-semibold">24/7 Emergency Line</p>
-              <p className="text-[#D4AF37] font-bold">(555) 123-4568</p>
+              <p className="text-[#D4AF37] font-bold">+1 (457) 242 7717</p>
             </div>
           </div>
         </div>

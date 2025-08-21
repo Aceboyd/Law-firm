@@ -32,9 +32,9 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-[#2E3A59] mb-1">Office Address</h4>
                     <p className="text-[#2E3A59]/80">
-                      123 Legal District Drive<br />
-                      Suite 500<br />
-                      Metropolitan City, MC 12345
+                      777 S Figueroa St, Los Angeles, <br />CA 90017, USA
+                      <br />
+                      
                     </p>
                   </div>
                 </div>
@@ -46,8 +46,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-[#2E3A59] mb-1">Phone Numbers</h4>
                     <p className="text-[#2E3A59]/80">
-                      Main: (555) 123-4567<br />
-                      Emergency: (555) 123-4568
+                      Main: +1 (659) 237-0466<br />
+                      Emergency: +1 (457) 242 7717
                     </p>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ const Contact = () => {
                   <h4 className="text-sm font-semibold text-[#2E3A59]">Emergency Legal Matters</h4>
                   <p className="text-sm text-[#2E3A59]/80 mt-1">
                     If you have an urgent legal matter that requires immediate attention, 
-                    please call our emergency line at (555) 123-4568.
+                    please call our emergency line at +1(457) 242 7717.
                   </p>
                 </div>
               </div>
