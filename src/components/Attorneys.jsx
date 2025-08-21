@@ -25,7 +25,7 @@ const Attorneys = () => {
       specialties: ['Criminal Defense', 'DUI Defense', 'White-Collar Crime'],
       experience: '18 Years',
       education: 'Stanford Law School, J.D.',
-      email: 'michael.thompson@lexguardpro.com',
+      email: 'michael.thompson@colemanconsultlaw.com',
       phone: '+1 (636) 287-0662',
     },
     {
@@ -35,7 +35,7 @@ const Attorneys = () => {
       specialties: ['Family Law', 'Divorce', 'Child Custody'],
       experience: '12 Years',
       education: 'Yale Law School, J.D.',
-      email: 'emily.rodriguez@lexguardpro.com',
+      email: 'emily.rodriguez@colemanconsultlaw.com',
       phone: '+1 (457) 242 7717',
     },
   ];
