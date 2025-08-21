@@ -13,7 +13,7 @@ const Footer = () => {
                 <Scale className="h-6 w-6 text-[#FFFFFF]" />
               </div>
               <div>
-                <h3 className="text-xl font-serif font-bold text-[#FFFFFF]">COLEMAN CONSULTANCY</h3>
+                <h3 className="text-sm font-serif font-bold text-[#FFFFFF]">COLEMAN CONSULTANCY</h3>
                 <p className="text-sm text-[#F5F5F5]/80">Legal Excellence Since 1995</p>
               </div>
             </div>
