@@ -47,7 +47,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-[#2E3A59] mb-1">Phone Numbers</h4>
                     <p className="text-[#2E3A59]/80">
                       Main: +1 (659) 237-0466<br />
-                      Emergency: +1 (457) 242 7717
+                      Office: +1 (457) 242 7717
                     </p>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ const Contact = () => {
                     <p className="text-[#2E3A59]/80">
                       Monday - Friday: 8:00 AM - 6:00 PM<br />
                       Saturday: 9:00 AM - 2:00 PM<br />
-                      Emergency consultations available 24/7
+                     
                     </p>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const Contact = () => {
             </div>
             
             {/* Emergency Notice */}
-            <div className="bg-[#F5F5F5] border-l-4 border-[#D4AF37] p-6 rounded-lg">
+            {/* <div className="bg-[#F5F5F5] border-l-4 border-[#D4AF37] p-6 rounded-lg">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <Phone className="h-5 w-5 text-[#D4AF37]" />
@@ -95,7 +95,7 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}

@@ -83,8 +83,6 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-[#D4AF37] mt-1" />
                 <div className="text-[#F5F5F5]/80">
-                  <p>123 Legal District Drive</p>
-                  <p>Suite 500</p>
                   <p>777 S Figueroa St, Los Angeles, CA 90017, USA</p>
                 </div>
               </div>
@@ -98,10 +96,7 @@ const Footer = () => {
               </div>
             </div>
             
-            <div className="mt-6 p-4 bg-[#2E3A59]/80 rounded-lg">
-              <p className="text-sm text-[#F5F5F5]/80 mb-2 font-semibold">24/7 Emergency Line</p>
-              <p className="text-[#D4AF37] font-bold">+1 (457) 242 7717</p>
-            </div>
+            
           </div>
         </div>
 

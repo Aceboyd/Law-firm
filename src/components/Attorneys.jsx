@@ -36,7 +36,7 @@ const Attorneys = () => {
       experience: '12 Years',
       education: 'Yale Law School, J.D.',
       email: 'emily.rodriguez@lexguardpro.com',
-      phone: '(547) 673-4599',
+      phone: '+1 (457) 242 7717',
     },
   ];
 
