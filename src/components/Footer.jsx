@@ -103,7 +103,7 @@ const Footer = () => {
         <div className="border-t border-[#2E3A59]/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-[#F5F5F5]/80 text-sm">
-              © 2024 LexGuard Pro. All rights reserved. | Attorney Advertising
+              © 2024 Coleman Consultancy. All rights reserved. | Attorney Advertising
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-[#F5F5F5]/80 hover:text-[#2E3A59] transition-colors duration-200">
